@@ -1,4 +1,11 @@
+<<<<<<< HEAD
 # EarnsharkSdk
+=======
+# Earnshark SDK for Ruby
+
+This is a JavaScript SDK to call https://app.earnshark.com API. Contains methods to call the EarnShark API making the application integration fast.
+
+>>>>>>> 08f021f84ff54ff75e3f49fef78431c800f801c1
 
 Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/earnshark_sdk`. To experiment with that code, run `bin/console` for an interactive prompt.
 
@@ -32,7 +39,11 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
+<<<<<<< HEAD
 Bug reports and pull requests are welcome on GitHub at  https://github.com/99xt/earnshark-sdk-ruby. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+=======
+Bug reports and pull requests are welcome on GitHub at https://github.com/99xt/earnshark-sdk-ruby. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+>>>>>>> 08f021f84ff54ff75e3f49fef78431c800f801c1
 
 
 ## License
