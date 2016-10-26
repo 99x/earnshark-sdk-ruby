@@ -1,9 +1,9 @@
 $LOAD_PATH.unshift File.expand_path("../../lib", __FILE__)
 require "earnshark_sdk"
 
-product_id = 0
+product_id = 9
 
-key = "test"
+key = ""
 
 body = '{
             "account":{
@@ -17,12 +17,12 @@ body = '{
                 "sendInvoiceNow" : true
          }'
 
-account_id = 0
+account_id = "123456"
 
 
 earnshark = EarnShark::API.new(product_id, key)
 
-earnshark.isTest(true)
+#earnshark.isTest(true)
 
 addNewRes= earnshark.add_new_subscription(body)
 
@@ -42,7 +42,7 @@ renew_subs= earnshark.renew_subscription( subscription_id, new_license_id )
 puts "\n\n"
 puts "Renew Subscripiton with a new license:\n #{renew_subs}"
 
-license_id = 0
+license_id = 17
 license_token = ''
 
 get_license= earnshark.get_license_information( license_id, license_token )
