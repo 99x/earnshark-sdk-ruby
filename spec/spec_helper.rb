@@ -5,17 +5,17 @@ product_id = 9
 
 key = ""
 
-body = '{
-            "account":{
-                    "name":"Account Name",
-                    "email":"Account@example.com",
-                    "accountID":"123456",
-                    "start_date":"01/01/2016"
+body = {
+            :account => {
+                    :name =>"Account Name",
+                    :email => "Account@example.com",
+                    :accountID => "12345678",
+                    :start_date =>  "01/01/2016"
                 },
-                "license_id":0,
-                "enableNotifications" : false,
-                "sendInvoiceNow" : true
-         }'
+                :license_id => 17,
+                :enableNotifications => false,
+                :sendInvoiceNow => true
+         }
 
 account_id = "123456"
 
@@ -35,8 +35,8 @@ puts "\n\n"
 puts "Get account information:\n #{accountInfo}"
 
 
-subscription_id = 0
-new_license_id =0
+subscription_id = 84
+new_license_id = 20
 
 renew_subs= earnshark.renew_subscription( subscription_id, new_license_id )
 puts "\n\n"
