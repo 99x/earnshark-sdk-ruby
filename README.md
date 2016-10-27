@@ -1,10 +1,20 @@
 # Earnshark SDK for Ruby
+![sdk ruby](https://img.shields.io/badge/sdk-Ruby-ff69b4.svg)
+[![Join the chat at https://gitter.im/99xt/earnshark-sdk-js](https://badges.gitter.im/99xt/earnshark-sdk-js.svg)](https://gitter.im/99xt/earnshark-sdk-js?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![serverless](http://public.serverless.com/badges/v3.svg)](http://www.serverless.com)
+[![license](https://img.shields.io/npm/l/earnshark-sdk.svg)](https://www.npmjs.com/package/earnshark-sdk)
 
-This is a JavaScript SDK to call https://app.earnshark.com API. Contains methods to call the EarnShark API making the application integration fast.
+This is a Ruby SDK to call https://app.earnshark.com API endpoints. Contains methods to call the EarnShark API making the application integration fast.
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/earnshark_sdk`. To experiment with that code, run `bin/console` for an interactive prompt.
+## Functions Available 
 
-TODO: Delete this and the text above, and describe your gem
+* get_account_information - Retrieve information on a particular account/subscription
+* get_license_information - Retrieve information on a particular license
+* get_all_licenses_of_product - Retrieve all the license data for a particular product
+* add_new_subscription - Add a new subscription to a product
+* get_payment_url - Returns the payment portal URL for a subscription(linked to PayPal)
+* get_account_payments - Returns all the payment transactions associated with the account
+* renew_subscription - Renew/Update a Subscription
 
 ## Installation
 
@@ -21,6 +31,7 @@ And then execute:
 Or install it yourself as:
 
     $ gem install earnshark_sdk
+    
 
 ## Usage
 
