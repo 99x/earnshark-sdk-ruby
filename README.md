@@ -35,7 +35,91 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Initiliaze the Object,
+
+The token key and the product ID are required (this can be taken from the EarnShark dashboard)
+```ruby
+key = ""
+product_id = 9
+
+```
+
+```ruby
+earnshark = EarnShark::API.new(product_id, key)
+```
+
+### Debug Mode 
+If you need to see the responses without calling the live endpoints and send dummy responses
+```ruby
+earnshark.isTest(true)
+```
+
+### Add New Account
+Creating new account, you need to pass the following data in the structure to the method
+```ruby
+body = {
+            :account => {
+                    :name =>"Account Name",
+                    :email => "Account@example.com",
+                    :accountID => "12345678",
+                    :start_date =>  "01/01/2016"
+                },
+                :license_id => 17,
+                :enableNotifications => false,
+                :sendInvoiceNow => true
+         }
+```
+
+```ruby
+addNewRes = earnshark.add_new_subscription(body)
+```
+
+### Get account information
+You will need to pass the account id for this,
+
+```ruby
+account_id = "123456"
+accountInfo= earnshark.get_account_information(account_id)
+```
+
+### Renew a subscription with a new license
+You will need to pass the current subscription id and the new license id to renew
+
+```ruby
+subscription_id = 84
+new_license_id = 20
+
+renew_subs= earnshark.renew_subscription( subscription_id, new_license_id )
+```
+
+### Get license information for a single license
+Get the license information using the license id and the license token
+
+```ruby
+license_id = 17
+license_token = ''
+
+get_license= earnshark.get_license_information( license_id, license_token )
+```
+
+### Get all the licenses
+Get all the licenses information
+```ruby
+all_licenses= earnshark.get_all_licenses_of_product()
+```
+
+### Get Transaction details for an account
+Retrieve the processed/unprocessed transactions for an account
+```ruby
+account_transaction= earnshark.get_account_payments(account_id)
+```
+
+### Generate Payment URL to transfer to paymen gateway
+Redirect URL is need to passed here as well
+```ruby
+redirect = 'http://app.earnshark.com';
+payment_url= earnshark.get_payment_url(account_id, redirect)
+```
 
 ## Development
 
