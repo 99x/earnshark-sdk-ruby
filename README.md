@@ -1,5 +1,6 @@
 # Earnshark SDK for Ruby
 ![sdk ruby](https://img.shields.io/badge/sdk-Ruby-ff69b4.svg)
+[![Gem Version](https://badge.fury.io/rb/earnshark_sdk.svg)](https://badge.fury.io/rb/earnshark_sdk)
 [![Join the chat at https://gitter.im/99xt/earnshark-sdk-js](https://badges.gitter.im/99xt/earnshark-sdk-js.svg)](https://gitter.im/99xt/earnshark-sdk-js?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 [![serverless](http://public.serverless.com/badges/v3.svg)](http://www.serverless.com)
 [![license](https://img.shields.io/npm/l/earnshark-sdk.svg)](https://www.npmjs.com/package/earnshark-sdk)
