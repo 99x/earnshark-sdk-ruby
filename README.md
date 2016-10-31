@@ -11,13 +11,16 @@ at RubyGems : https://rubygems.org/gems/earnshark_sdk
 
 ## Functions Available 
 
-* get_account_information - Retrieve information on a particular account/subscription
-* get_license_information - Retrieve information on a particular license
-* get_all_licenses_of_product - Retrieve all the license data for a particular product
-* add_new_subscription - Add a new subscription to a product
-* get_payment_url - Returns the payment portal URL for a subscription(linked to PayPal)
-* get_account_payments - Returns all the payment transactions associated with the account
-* renew_subscription - Renew/Update a Subscription
+* Accounts:
+  * get_account_information - Retrieve information on a particular account/subscription
+  * get_account_payments - Returns all the payment transactions associated with the account
+* Licenses:
+  * get_license_information - Retrieve information on a particular license
+  * get_all_licenses_of_product - Retrieve all the license data for a particular product
+* Subscriptions: 
+  * new_subscription - Add a new subscription to a product
+  * renew_subscription - Renew/Update a Subscription
+  * get_payment_url - Returns the payment portal URL for a subscription(linked to PayPal)
 
 ## Installation
 
@@ -48,13 +51,8 @@ product_id = 9
 ```
 
 ```ruby
-earnshark = EarnShark::API.new(product_id, key)
-```
-
-### Debug Mode 
-If you need to see the responses without calling the live endpoints and send dummy responses
-```ruby
-earnshark.isTest(true)
+require 'earnshark_sdk/api'
+earnshark = EarnShark::Api::Client.new(product_id, key)
 ```
 
 ### Add New Account
@@ -74,7 +72,7 @@ body = {
 ```
 
 ```ruby
-addNewRes = earnshark.add_new_subscription(body)
+addNewRes = earnshark.new_subscription(body)
 ```
 
 ### Get account information
