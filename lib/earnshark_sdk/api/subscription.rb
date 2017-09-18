@@ -16,6 +16,7 @@ module EarnShark
 
     # Get payment URL
     def get_payment_url(account_id, redirect)
+      puts "YESSSSSSSSSSSSS!"
       "#{app_dir}"+"payment.html?redirect=#{redirect}&productID=#@product_id&accountID=#{account_id}&key=#@key"
     end
 
