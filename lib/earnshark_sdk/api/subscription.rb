@@ -15,9 +15,15 @@ module EarnShark
     end
 
     # Get payment URL
-    def get_payment_url(account_id, redirect)
+    def get_payment_url(product_id, key, account_id, redirect)
       puts "YESSSSSSSSSSSSS!"
-      "#{app_dir}"+"payment.html?redirect=#{redirect}&productID=#@product_id&accountID=#{account_id}&key=#@key"
+      body = {
+                "redirect": redirect,
+                "account_id": account_id,
+                "product_id": product_id,
+                "key": key
+            }
+      post("https://app.earnshark.com/prod/payments/getTransactionID", body.to_json)
     end
 
   end
