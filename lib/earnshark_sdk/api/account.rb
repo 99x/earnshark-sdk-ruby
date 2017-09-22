@@ -11,7 +11,7 @@ module EarnShark
     # Example response:
     #   [ { "Amount":"100", "Created_At":"1474872974062", "Currency":"USD", "Product_ID":1, "PayPal_Transaction":"PAY-11111111111", "Updated_At":"1474872974062", "Account_ID":"local", "PayPal_Payer_ID":"111111", "Subscription_ID":1, "Payment_Processed":true, "Payout_ID":"12345", "Payment_Sent":true, "PayPal_Payment_ID":"PAY-11111111111" } ]'
     def get_account_payments(account_id)
-      get("#{base_url}product/#{@product_id}/subscriptioninfo/#{account_id}?key=#{@key}")
+      get("#{base_url}product/#{@product_id}/account/#{account_id}/transactions?key=#{@key}")
     end
 
   end
