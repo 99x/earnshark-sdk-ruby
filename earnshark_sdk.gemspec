@@ -6,8 +6,8 @@ require 'earnshark_sdk/api/version'
 Gem::Specification.new do |spec|
   spec.name          = "earnshark_sdk"
   spec.version       = EarnShark::Api::VERSION
-  spec.authors       = ["Chamath Palihawadana"]
-  spec.email         = ["chamathpali123@gmail.com"]
+  spec.authors       = ["Chamath Palihawadana", "Niveditha Karmegam"]
+  spec.email         = ["chamathpali123@gmail.com", "kniveditha777@gmail.com"]
 
   spec.summary       = "This is a Ruby SDK to call https://app.earnshark.com API endpoints"
   spec.description   = "This is a Ruby SDK to call https://app.earnshark.com API endpoints. Contains methods to call the EarnShark API making the application integration fast"
