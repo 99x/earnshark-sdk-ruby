@@ -22,7 +22,7 @@ module EarnShark
                :account_id => account_id,
                :product_id => @product_id,
                :key =>  @key,
-               :new_license_id => @new_license_id
+               :new_license_id => new_license_id
              }
       post("#{base_url}/payments/getTransactionID", body)
     end
