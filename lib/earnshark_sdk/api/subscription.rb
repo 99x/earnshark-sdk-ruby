@@ -17,11 +17,12 @@ module EarnShark
     # Get payment URL
     # Example response:
     # {"url":"http://app.earnshark.com.s3-website-eu-west-1.amazonaws.com/payments.html?transactionID=XXXXXXXXX"}
-    def get_payment_url(account_id, redirect)
+    def get_payment_url(account_id, redirect, new_license_id)
       body = { :redirect => redirect,
                :account_id => account_id,
                :product_id => @product_id,
-               :key =>  @key
+               :key =>  @key,
+               :new_license_id => new_license_id
              }
       post("#{base_url}/payments/getTransactionID", body)
     end
