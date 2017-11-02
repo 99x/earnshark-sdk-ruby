@@ -27,5 +27,7 @@ module EarnShark
       post("#{base_url}/payments/getTransactionID", body)
     end
 
-  end
+    def renewed_subscription_notifier(subscription_id, body)
+      post("#{base_url}notification/subscription/#{subscription_id}?key=#@key", body)
+    end
 end
