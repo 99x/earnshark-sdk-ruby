@@ -28,6 +28,6 @@ module EarnShark
     end
 
     def renewed_subscription_notifier(subscription_id, body)
-      post("#{base_url}notification/subscription/#{subscription_id}?key=#@key", body)
+      post("#{base_url}notification/#@product_id/subscription/#{subscription_id}?key=#@key", body)
     end
 end
